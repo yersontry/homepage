@@ -124,8 +124,8 @@ body {
 
 .contact-info__avatar {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
     object-fit: cover;
     border: 3px solid;
     border-color: var(--text-decoration-color);
