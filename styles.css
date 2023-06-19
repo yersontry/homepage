@@ -9,11 +9,11 @@ body {
     line-height: 1.5;
 
     --primary-text-color: #181820;
-    --secondary-text-color: #5c5c62;
-    --durability-text-color: #6a737d9c;
-    --icon-color: #6a737d;
+    --secondary-text-color: #525259;
+    --durability-text-color: #5c646e9c;
+    --icon-color: #0064d7;
     --border-color: #ff9a0045;
-    --text-decoration-color: #ff9a00;
+    --text-decoration-color: #136ed6;
 }
 
 .container {
@@ -37,7 +37,7 @@ body {
 .resume {
     margin: 50px auto;
     border: 1px solid #f5f5f5;
-    box-shadow: 1px 1px 7px 7px #f5f5f5;
+    box-shadow: 1px 1px 7px 7px #e6e0e0;
     padding: 30px 0;
     max-width: 900px;
 }
@@ -74,10 +74,9 @@ body {
 }
 
 .contact-info__header {
-    color: var(--primary-text-color);
+    color: #0064d7;
     margin-bottom: 15px;
     text-decoration-color: var(--text-decoration-color);
-    text-decoration-line: underline;
 }
 
 .contact-info__sub-header {
@@ -124,10 +123,10 @@ body {
 
 .contact-info__avatar {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 135px;
+    height: 135px;
     object-fit: cover;
-    border: 3px solid;
+    border: 6px double;
     border-color: var(--text-decoration-color);
 }
 
@@ -165,7 +164,7 @@ body {
 
 .skills__text {
     color: var(--secondary-text-color);
-    text-align: justify;
+    text-align: center;
 }
 
 .experiences {
@@ -189,7 +188,6 @@ body {
 .experiences__company-header-name {
     color: var(--primary-text-color);
     text-decoration-color: var(--text-decoration-color);
-    text-decoration-line: underline;
     text-align: left;
     margin-bottom: 20px;
 }
