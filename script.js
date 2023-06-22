@@ -1,6 +1,6 @@
 // Get the language sections
-const englishSection = document.getElementById("english");
-const spanishSection = document.getElementById("spanish");
+const englishSection = document.getElementById("english-resume");
+const spanishSection = document.getElementById("spanish-resume");
 
 // Get user's browser preferred language
 const browserLanguage = navigator.languages[0].startsWith("en")
@@ -19,23 +19,35 @@ const selectElement = document.querySelector(".select-wrapper");
 
 // Set preferred language, browser language by default
 let preferredLanguage =
-  localStorage.getItem("language") != null
-    ? localStorage.getItem("language")
-    : localStorage.getItem("language") == null
+  localLanguage != null
+    ? localLanguage
+    : localLanguage == null
     ? browserLanguage
-    : "problems";
+    : "english";
 
-console.log("language stored in memory is " + localStorage.getItem("language"));
+console.log("language stored in memory is " + localLanguage);
 
 // Set the selected option based on the preferred language
 selectElement.value = preferredLanguage;
 
 console.log("preferred lang is " + preferredLanguage);
 
+if (preferredLanguage === "spanish") {
+  spanishSection.style.display = "block";
+  englishSection.style.display = "none";
+} else if (preferredLanguage === "english") {
+  spanishSection.style.display = "none";
+  englishSection.style.display = "block";
+} else {
+  englishSection.style.display = "none";
+  spanishSection.style.display = "none";
+}
+
 // Function to change the language
 function changeLanguage(language) {
   // Update the selected option
   selectElement.value = language;
+  console.log("function lang is " + language);
 
   // Show the appropriate language section based on the user's preference
   if (language === "spanish") {
@@ -52,3 +64,6 @@ function changeLanguage(language) {
   // Store the language preference in local storage
   localStorage.setItem("language", language);
 }
+
+/* changeLanguage(preferredLanguage);
+ */
