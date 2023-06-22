@@ -4,6 +4,31 @@
     box-sizing: border-box;
 }
 
+.language-section {
+    display: none;
+}
+
+#select-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+  }  
+
+/* Position the select element absolutely */
+.select-wrapper {
+    position: absolute;
+    top: 10px; /* Adjust the top position as needed */
+    right: 10px; /* Adjust the right position as needed */
+    z-index: 999; /* Set a high z-index value to ensure it appears on top */
+  }
+  
+/* Give the select element a higher appearance priority */
+.select-wrapper select {
+    position: relative;
+    z-index: 1000;
+  }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
