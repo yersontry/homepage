@@ -7,7 +7,7 @@ const browserLanguage = navigator.languages[0].startsWith("en")
   ? "english"
   : navigator.languages[0].startsWith("es")
   ? "spanish"
-  : "other";
+  : "english";
 
 console.log("browser language is " + browserLanguage);
 
